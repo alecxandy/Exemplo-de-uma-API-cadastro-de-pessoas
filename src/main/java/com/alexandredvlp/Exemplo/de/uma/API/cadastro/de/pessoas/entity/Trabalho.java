@@ -3,23 +3,21 @@ package com.alexandredvlp.Exemplo.de.uma.API.cadastro.de.pessoas.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Pessoa {
+public class Trabalho {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String nome;
+    private String descricao;
 
-    @ManyToOne
-    @JoinColumn(name = "trabalho_id") //cria uma coluna com as fk de trabalho
-    private Trabalho trabalho;
-
-    private String email;
+    @OneToMany(mappedBy = "trabalho")
+    private List<Pessoa> pessoaList;
 }
