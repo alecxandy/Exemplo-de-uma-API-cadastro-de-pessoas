@@ -17,9 +17,5 @@ public class Pessoa {
 
     private String nome;
 
-    @ManyToOne
-    @JoinColumn(name = "trabalho_id") //cria uma coluna com as fk de trabalho
-    private Trabalho trabalho;
 
-    private String email;
 }
