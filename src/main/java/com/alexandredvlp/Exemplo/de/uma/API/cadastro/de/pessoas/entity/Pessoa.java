@@ -1,7 +1,6 @@
 package com.alexandredvlp.Exemplo.de.uma.API.cadastro.de.pessoas.entity;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Getter
